@@ -5,11 +5,20 @@ export default defineConfig({
   srcDir: 'docs',
   title: "赛博扫盲手册",
   description: "面向零基础读者，语言通俗易懂，以生活类比为主，循序渐进建立数字世界认知体系。",
+  lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '关于', link: '/preface' }
+      { text: '关于', link: '/preface' },
+      {
+        text: '推荐阅读',
+        items: [
+          { text: '提问的智慧', link: '/more/How-To-Ask-Questions' },
+          { text: '计算机自学指南', link: 'https://csdiy.wiki/' },
+          { text: '如何使用你的电脑', link: 'https://estrellahb.github.io/HowToUseYourComputer/' }
+        ]
+      }
     ],
 
     sidebar: [
