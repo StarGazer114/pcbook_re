@@ -55,20 +55,23 @@
 
 ### 📝 小测验
 
-<Quiz 
-  question="1. 在浏览器地址栏输入 www.taobao.com，这串英文字母被称为："
-  :options="['IP 地址', '域名']"
-  answer="域名"
-/>
-
-<Quiz 
-  question="2. 下列哪种网址开头代表你的数据在传输过程中是加密安全的？"
-  :options="['http://', 'https://']"
-  answer="https://"
-/>
-
-<Quiz 
-  question="3. 玩需要快速反应的对战游戏时，最怕网络出现什么情况？"
-  :options="['带宽太小', '延迟（Ping）太高']"
-  answer="延迟（Ping）太高"
-/>
+<QuizSequential :questions="[
+  { 
+    question: '1. 网址 www.taobao.com 这种方便记忆的名称被称为：', 
+    options: ['IP地址', '域名', '家庭住址', '网名'],
+    answer: '域名',
+    hint: '域名是“门店名”，IP 地址是难记的数字“门牌号”。'
+  },
+  { 
+    question: '2. 在输入支付密码时，看到网址开头是什么能证明数据传输是加密安全的？', 
+    options: ['http://', 'https://', 'www://', 'ftp://'],
+    answer: 'https://',
+    hint: '那个多出来的“s”代表 Secure（安全），像给信息上了锁。'
+  },
+  { 
+    question: '3. 玩网络游戏时，指令传回服务器慢导致操作有“粘滞感”，这通常是因为：', 
+    options: ['马路不够宽（带宽）', '网速太慢', '延迟（Ping）太高', '电脑没插电'],
+    answer: '延迟（Ping）太高',
+    hint: '延迟决定了信息往返时间，对即时反馈的游戏至关重要。'
+  }
+]" />
